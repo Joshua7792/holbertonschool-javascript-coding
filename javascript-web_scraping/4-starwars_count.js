@@ -17,7 +17,7 @@ request(apiUrl, (error, response, body) => {
   const films = JSON.parse(body).results;
   // Parse the JSON response and get the array of films
 
-  const wedgeCount = films.filter(film => 
+  const wedgeCount = films.filter(film =>
     film.characters.some(url => url.includes('/18/'))
   ).length;
   // Count the number of films where Wedge Antilles (character ID 18) appears
